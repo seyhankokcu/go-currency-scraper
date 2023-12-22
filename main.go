@@ -27,7 +27,7 @@ func (p Parity) Info() string {
 	return p.From + "/" + p.To + "," + fmt.Sprint(p.Value) + "," + p.DateTime.Format("2006-01-02 15:04:05")
 }
 
-// Get fetches the currency parity from Wise API.
+// Get fetches the currency parity from Wise.
 func (p *Parity) Get() {
 	url := fmt.Sprintf("https://wise.com/us/currency-converter/%s-to-%s-rate", p.From, p.To)
 
